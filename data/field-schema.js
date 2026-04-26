@@ -1,6 +1,6 @@
 // ══════════════════════════════════════════════════════════════════
 //  field-schema.js  —  v6
-//  Generated: 17:35:42 26/4/2026
+//  Generated: 19:15:34 26/4/2026
 //  Sources:
 //    • Template_DCCT.docx
 //    • Template_DCTQ.docx
@@ -194,6 +194,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
+    formula    : "tcLT + tcTH",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "tcTong",
   },
@@ -206,6 +207,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : false,
     saveToSheet: true,
+    formula    : "tcLT * 1.73 + tcTH * 1.64",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "ects",
   },
