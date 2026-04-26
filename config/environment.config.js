@@ -9,7 +9,7 @@
 const ENV_CONFIG = {
 
   // ── Google Apps Script ───────────────────────────────────
-  GAS_URL: 'https://script.google.com/macros/s/AKfycbxfAgOgyCuGgGiSzT4ROgjdM4S6xYrRcu4LRtRS_Hgg-LvvIWvJ0XGR36IrXWdLkeG6/exec',
+  GAS_URL: 'https://script.google.com/macros/s/AKfycbw57BRmggvacL_ph54-TtP1gVhRrvViTvumhEymuNhiQZXusdQ9aGBAbbp9asfjTVWw/exec',
 
   // ── Thông tin đơn vị ─────────────────────────────────────
   UNIT_NAME   : 'Khoa Công nghệ Hóa học',
