@@ -1,6 +1,6 @@
 // ══════════════════════════════════════════════════════════════════
 //  field-schema.js  —  v6
-//  Generated: 19:21:41 26/4/2026
+//  Generated: 19:31:11 26/4/2026
 //  Sources:
 //    • Template_DCCT.docx
 //    • Template_DCTQ.docx
@@ -108,7 +108,7 @@ const FIELD_SCHEMA = {
     dataKey    : "loaiHP",
   },
 
-  tcLT: {
+  tinchiLT: {
     label      : "TC Lý thuyết",
     type       : "number",
     section    : 1,
@@ -116,12 +116,11 @@ const FIELD_SCHEMA = {
     exportDCCT : false,
     exportDCTQ : false,
     saveToSheet: true,
-    required   : true,
     placeholder: "VD: 2",
-    dataKey    : "tcLT",
+    dataKey    : "tinchiLT",
   },
 
-  tcTH: {
+  tinchiTH: {
     label      : "TC Thực hành",
     type       : "number",
     section    : 1,
@@ -130,10 +129,10 @@ const FIELD_SCHEMA = {
     exportDCTQ : false,
     saveToSheet: true,
     placeholder: "VD: 1",
-    dataKey    : "tcTH",
+    dataKey    : "tinchiTH",
   },
 
-  tcTong: {
+  tinchi: {
     label      : "Tổng TC",
     type       : "calc",
     section    : 1,
@@ -141,9 +140,9 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
-    formula    : "tcLT + tcTH",
+    formula    : "tinchiLT + tinchiTH",
     readonlyIf : "readonlyIf=calc",
-    dataKey    : "tcTong",
+    dataKey    : "tinchi",
   },
 
   ects: {
@@ -154,7 +153,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : false,
     saveToSheet: true,
-    formula    : "tcLT * 1.73 + tcTH * 1.64",
+    formula    : "(tinchiLT * 1.73) + (tinchiTH * 1.64)",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "ects",
   },
@@ -167,7 +166,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
-    formula    : "tcLT*15",
+    formula    : "tinchiLT*15",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "tietLT",
   },
@@ -180,7 +179,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
-    formula    : "tcTH*30",
+    formula    : "tinchiTH*30",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "tietTH",
   },
@@ -193,12 +192,12 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
-    formula    : "tcLT*35+tcTH*20",
+    formula    : "tinchiLT*35+tinchiTH*20",
     readonlyIf : "readonlyIf=calc",
     dataKey    : "gioTuHoc",
   },
 
-  donVi: {
+  donvi: {
     label      : "Đơn vị phụ trách",
     type       : "menu",
     section    : 1,
@@ -207,7 +206,7 @@ const FIELD_SCHEMA = {
     exportDCTQ : true,
     saveToSheet: true,
     sourceKey  : "boMon",
-    dataKey    : "donVi",
+    dataKey    : "donvi",
   },
 
   hpTienQuyet: {
@@ -326,7 +325,7 @@ const FIELD_SCHEMA = {
     exportDCCT : false,
     exportDCTQ : false,
     saveToSheet: true,
-    sourceKey  : "khoa_dt",
+    sourceKey  : "khoaDT",
     dataKey    : "khoaDT",
   },
 
@@ -338,7 +337,7 @@ const FIELD_SCHEMA = {
     exportDCCT : false,
     exportDCTQ : false,
     saveToSheet: true,
-    sourceKey  : "nganhdt",
+    sourceKey  : "nganhDT",
     dataKey    : "nganhDT",
   },
 
@@ -527,7 +526,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : true,
     saveToSheet: true,
-    placeholder: "Chương 1...\r\n1.1...",
+    placeholder: "Chương 1...\n1.1...",
     dataKey    : "noidungChuong",
   },
 
