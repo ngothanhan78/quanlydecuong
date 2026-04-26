@@ -1,6 +1,6 @@
 // ══════════════════════════════════════════════════════════════════
 //  field-schema.js  —  v6
-//  Generated: 19:15:34 26/4/2026
+//  Generated: 19:21:41 26/4/2026
 //  Sources:
 //    • Template_DCCT.docx
 //    • Template_DCTQ.docx
@@ -12,60 +12,7 @@
 
 // FIELD_SCHEMA
 const FIELD_SCHEMA = {
-  // ── Section 0
-  tietLT: {
-    label      : "Tiết LT",
-    type       : "calc",
-    section    : 0,
-    showInForm : true,
-    exportDCCT : true,
-    exportDCTQ : true,
-    saveToSheet: true,
-    formula    : "tcLT*15",
-    readonlyIf : "readonlyIf=calc",
-    dataKey    : "tietLT",
-  },
-
-  tietTH: {
-    label      : "Tiết TN/TH",
-    type       : "calc",
-    section    : 0,
-    showInForm : true,
-    exportDCCT : true,
-    exportDCTQ : true,
-    saveToSheet: true,
-    formula    : "tcTH*30",
-    readonlyIf : "readonlyIf=calc",
-    dataKey    : "tietTH",
-  },
-
-  gioTuHoc: {
-    label      : "Giờ tự học",
-    type       : "calc",
-    section    : 0,
-    showInForm : true,
-    exportDCCT : true,
-    exportDCTQ : true,
-    saveToSheet: true,
-    formula    : "tcLT*35+tcTH*20",
-    readonlyIf : "readonlyIf=calc",
-    dataKey    : "gioTuHoc",
-  },
-
-  Tuhocchuong: {
-    label      : "Tự học (calc)",
-    type       : "calc",
-    section    : 0,
-    showInForm : true,
-    exportDCCT : true,
-    exportDCTQ : false,
-    saveToSheet: false,
-    formula    : "(LTchuong/15)*35+(THchuong/30)*20",
-    readonlyIf : "readonlyIf=calc",
-    dataKey    : "Tuhocchuong",
-  },
-
-  // ── Section 1
+  // ── Thông tin tổng quát
   tenTV: {
     label      : "Tên HP (tiếng Việt)",
     type       : "menu",
@@ -212,6 +159,45 @@ const FIELD_SCHEMA = {
     dataKey    : "ects",
   },
 
+  tietLT: {
+    label      : "Tiết LT",
+    type       : "calc",
+    section    : 1,
+    showInForm : true,
+    exportDCCT : true,
+    exportDCTQ : true,
+    saveToSheet: true,
+    formula    : "tcLT*15",
+    readonlyIf : "readonlyIf=calc",
+    dataKey    : "tietLT",
+  },
+
+  tietTH: {
+    label      : "Tiết TN/TH",
+    type       : "calc",
+    section    : 1,
+    showInForm : true,
+    exportDCCT : true,
+    exportDCTQ : true,
+    saveToSheet: true,
+    formula    : "tcTH*30",
+    readonlyIf : "readonlyIf=calc",
+    dataKey    : "tietTH",
+  },
+
+  gioTuHoc: {
+    label      : "Giờ tự học",
+    type       : "calc",
+    section    : 1,
+    showInForm : true,
+    exportDCCT : true,
+    exportDCTQ : true,
+    saveToSheet: true,
+    formula    : "tcLT*35+tcTH*20",
+    readonlyIf : "readonlyIf=calc",
+    dataKey    : "gioTuHoc",
+  },
+
   donVi: {
     label      : "Đơn vị phụ trách",
     type       : "menu",
@@ -279,7 +265,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : false,
     saveToSheet: true,
-    sourceKey  : "hình_thức_gd",
+    sourceKey  : "hinhThucGD",
     groupId    : "hinhThuc",
     dataKey    : "htTrucTiep",
   },
@@ -340,7 +326,7 @@ const FIELD_SCHEMA = {
     exportDCCT : false,
     exportDCTQ : false,
     saveToSheet: true,
-    sourceKey  : "khóa_đt",
+    sourceKey  : "khoa_dt",
     dataKey    : "khoaDT",
   },
 
@@ -356,7 +342,7 @@ const FIELD_SCHEMA = {
     dataKey    : "nganhDT",
   },
 
-  // ── Section 2
+  // ── Giảng viên [Table01]
   hoTen: {
     label      : "Họ và tên GV",
     type       : "menu",
@@ -396,7 +382,7 @@ const FIELD_SCHEMA = {
     dataKey    : "donviCT",
   },
 
-  // ── Section 3
+  // ── Mô tả học phần
   moTa: {
     label      : "Nội dung mô tả",
     type       : "textarea",
@@ -410,7 +396,7 @@ const FIELD_SCHEMA = {
     dataKey    : "moTa",
   },
 
-  // ── Section 4
+  // ── Chuẩn đầu ra [Table02]
   cdrCtdt: {
     label      : "CĐR CTĐT (PLO)",
     type       : "menu",
@@ -419,7 +405,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : false,
     saveToSheet: true,
-    sourceKey  : "cđr_ctđt",
+    sourceKey  : "cdrCtdt",
     dataKey    : "cdrCtdt",
   },
 
@@ -459,7 +445,7 @@ const FIELD_SCHEMA = {
     dataKey    : "mucdoNL",
   },
 
-  // ── Section 5
+  // ── .1 — Phân bổ thời gian [Table03]
   tenChuong: {
     label      : "Tên chương/bài",
     type       : "text",
@@ -508,6 +494,19 @@ const FIELD_SCHEMA = {
     dataKey    : "THchuong",
   },
 
+  Tuhocchuong: {
+    label      : "Tự học (calc)",
+    type       : "calc",
+    section    : 5,
+    showInForm : true,
+    exportDCCT : true,
+    exportDCTQ : false,
+    saveToSheet: false,
+    formula    : "(LTchuong/15)*35+(THchuong/30)*20",
+    readonlyIf : "readonlyIf=calc",
+    dataKey    : "Tuhocchuong",
+  },
+
   trongsochuong: {
     label      : "Trọng số (%)",
     type       : "number",
@@ -544,7 +543,7 @@ const FIELD_SCHEMA = {
     dataKey    : "huongdanTH",
   },
 
-  // ── Section 6
+  // ── Phương pháp dạy học [Table05]
   ppGD: {
     label      : "PP Giảng dạy",
     type       : "menu",
@@ -617,7 +616,7 @@ const FIELD_SCHEMA = {
     dataKey    : "cdrThuchanh",
   },
 
-  // ── Section 7
+  // ── Đánh giá [Table06]
   hdDG: {
     label      : "Hoạt động ĐG",
     type       : "menu",
@@ -626,7 +625,7 @@ const FIELD_SCHEMA = {
     exportDCCT : true,
     exportDCTQ : false,
     saveToSheet: false,
-    sourceKey  : "hđ_đánhgiá",
+    sourceKey  : "hdDanhGia",
     dataKey    : "hdDG",
   },
 
@@ -677,7 +676,7 @@ const FIELD_SCHEMA = {
     dataKey    : "thangdiem",
   },
 
-  // ── Section 8
+  // ── Nguồn học liệu [Table07/08/09]
   giaotrinh: {
     label      : "Giáo trình chính",
     type       : "textarea",
@@ -714,7 +713,7 @@ const FIELD_SCHEMA = {
     dataKey    : "phanmem",
   },
 
-  // ── Section 9
+  // ── Quy định (nội dung tĩnh từ ENV_CONFIG)
   hpCotLoiInternal: {
     label      : "HP cốt lõi (nội bộ)",
     type       : "select",
@@ -726,7 +725,7 @@ const FIELD_SCHEMA = {
     dataKey    : "hpCotLoiInternal",
   },
 
-  // ── Section 10
+  // ── Hướng dẫn thực hiện
   hkApDung: {
     label      : "Học kỳ áp dụng",
     type       : "menu",
@@ -752,7 +751,7 @@ const FIELD_SCHEMA = {
     dataKey    : "namHocApDung",
   },
 
-  // ── Section 11
+  // ── Phê duyệt
   pdLanDau: {
     label      : "Phê duyệt lần đầu",
     type       : "checkbox",
@@ -1047,18 +1046,17 @@ const DYNAMIC_TABLES = {
 
 // SECTIONS
 const SECTIONS = [
-  { id:0, label:"Section 0", tableIds:["Table03"], showInNav:false },
-  { id:1, label:"Section 1", tableIds:[], showInNav:true },
-  { id:2, label:"Section 2", tableIds:["Table01"], showInNav:true },
-  { id:3, label:"Section 3", tableIds:[], showInNav:true },
-  { id:4, label:"Section 4", tableIds:["Table02"], showInNav:true },
-  { id:5, label:"Section 5", tableIds:["Table03","Table04","Table10"], showInNav:true },
-  { id:6, label:"Section 6", tableIds:["Table05"], showInNav:true },
-  { id:7, label:"Section 7", tableIds:["Table06"], showInNav:true },
-  { id:8, label:"Section 8", tableIds:["Table07","Table08","Table09"], showInNav:true },
-  { id:9, label:"Section 9", tableIds:[], showInNav:true },
-  { id:10, label:"Section 10", tableIds:[], showInNav:true },
-  { id:11, label:"Section 11", tableIds:[], showInNav:true },
+  { id:1, label:"Thông tin tổng quát", tableIds:[], showInNav:true },
+  { id:2, label:"Giảng viên [Table01]", tableIds:["Table01"], showInNav:true },
+  { id:3, label:"Mô tả học phần", tableIds:[], showInNav:true },
+  { id:4, label:"Chuẩn đầu ra [Table02]", tableIds:["Table02"], showInNav:true },
+  { id:5, label:".1 — Phân bổ thời gian [Table03]", tableIds:["Table03","Table04","Table10"], showInNav:true },
+  { id:6, label:"Phương pháp dạy học [Table05]", tableIds:["Table05"], showInNav:true },
+  { id:7, label:"Đánh giá [Table06]", tableIds:["Table06"], showInNav:true },
+  { id:8, label:"Nguồn học liệu [Table07/08/09]", tableIds:["Table07","Table08","Table09"], showInNav:true },
+  { id:9, label:"Quy định (nội dung tĩnh từ ENV_CONFIG)", tableIds:[], showInNav:true, staticContent:true },
+  { id:10, label:"Hướng dẫn thực hiện", tableIds:[], showInNav:true },
+  { id:11, label:"Phê duyệt", tableIds:[], showInNav:true },
 ];
 
 // FOLDER_RULES
